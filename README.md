@@ -11,6 +11,7 @@
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=JoseHenao1_caic2024&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=JoseHenao1_caic2024)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=JoseHenao1_caic2024&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=JoseHenao1_caic2024)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=JoseHenao1_caic2024&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=JoseHenao1_caic2024)
+[![CI/CD Pipeline](https://github.com/JoseHenao1/caic2024/actions/workflows/build.yml/badge.svg)](https://github.com/JoseHenao1/caic2024/actions/workflows/build.yml)
 
 Implementation of a Simple App with the next operations:
 
