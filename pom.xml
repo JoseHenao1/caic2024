@@ -1,30 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
 	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.7.17</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>com.udea</groupId>
 	<artifactId>consulta</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>consulta</name>
 	<description>Demo project for Spring Boot</description>
+
+	<!-- Cambia el empaquetado a WAR -->
+	<packaging>war</packaging>
+
 	<properties>
 		<java.version>11</java.version>
 		<sonar.projectKey>JoseHenao1_caic2024</sonar.projectKey>
 		<sonar.organization>josehenao1</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
+
 	<dependencies>
+		<!-- Starter Web sin Tomcat embebido -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+		<!-- Excluir Tomcat embebido -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Otras dependencias -->
 		<dependency>
 			<groupId>com.github.javafaker</groupId>
 			<artifactId>javafaker</artifactId>
@@ -36,6 +54,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -45,6 +68,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 
+			<!-- Plugin para cobertura de pruebas con Jacoco -->
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
@@ -52,9 +76,7 @@
 				<executions>
 					<execution>
 						<goals>
-							<goal>
-								prepare-agent
-							</goal>
+							<goal>prepare-agent</goal>
 						</goals>
 					</execution>
 					<execution>
@@ -67,7 +89,7 @@
 				</executions>
 			</plugin>
 		</plugins>
+
 		<finalName>gitlab</finalName>
 	</build>
-
 </project>

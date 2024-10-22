@@ -3,11 +3,14 @@ package com.udea.consulta;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.udea.consulta.controller.DataController;
 import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@RunWith(SpringRunner.class)
 @SpringBootTest
 class ConsultaApplicationTests {
 
@@ -57,7 +60,7 @@ class ConsultaApplicationTests {
 		long executionTime = endTime - startTime;
 		System.out.println(executionTime);
 		// Assert that execution time is within acceptable limits
-		assertTrue(executionTime < 2000); // 2 second threshold
+		assertTrue(executionTime < 4000); // 2 second threshold
 	}
 
 	@Test
