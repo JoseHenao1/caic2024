@@ -19,5 +19,5 @@ steps:
 
   - task: PublishBuildArtifacts@1
     inputs:
-      PathtoPublish: '$(System.DefaultWorkingDirectory)/target/*.war'
+      PathtoPublish: 'C:\Agente\_work\1\s\target\gitlab.war'  # Especifica la ruta completa
       ArtifactName: 'java-app'
